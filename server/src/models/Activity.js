@@ -20,6 +20,13 @@ module.exports = (sequelize) => {
                 max: 5
             }
         },
+        duration: {
+            type: DataTypes.FLOAT,
+            validate: {
+                min: 1,
+                max: 48
+            }
+        },
         season: {
             type: DataTypes.ENUM('Verano', 'Otoño', 'Invierno', 'Primavera'),
             allowNull: false
